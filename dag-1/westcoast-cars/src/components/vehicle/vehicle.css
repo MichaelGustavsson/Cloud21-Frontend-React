@@ -1,0 +1,22 @@
+.vehicleList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vehicleList h1 {
+  color: yellow;
+}
+
+.vehicleList h4 {
+  color: blueviolet;
+}
+
+.vehicleDisplay {
+  display: flex;
+  gap: 10px;
+}
+
+.vehicleDisplay h4 {
+  color: #fff;
+}
