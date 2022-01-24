@@ -1,8 +1,11 @@
 /* Vi ska nu skapa ROOT komponenten i vår hierarki */
 // Steg 1. Importera React...
 import React from 'react';
+import { useState } from 'react';
 import NavBar from './components/navbar/Navbar';
 import VehicleList from './components/vehicle/VehicleList';
+
+import Vehicles from './data/vehicleData';
 
 import './styles.css';
 
@@ -14,13 +17,15 @@ import './styles.css';
 */
 
 const App = () => {
+  // Hantera tillståndet för våra bilar...
+  const [vehicles, setVehicles] = useState(Vehicles);
   // Vi måste returnera vårt html för komponenten...
   // Är INTE HTML, utan detta är JSX!!!
   return (
     <section>
       <NavBar />
       <div className='main'>
-        <VehicleList />
+        <VehicleList vehicles={vehicles} />
       </div>
     </section>
   );
