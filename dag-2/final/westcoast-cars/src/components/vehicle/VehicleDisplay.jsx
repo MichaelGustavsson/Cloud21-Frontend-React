@@ -1,9 +1,8 @@
 import { useState } from 'react';
 
 const VehicleDisplay = ({ vehicle }) => {
-  // första argumentet i [] är variabel och dess tillstånd.
-  // andra argumentet i [] är metoden för att ändra värdet
-  // på första argumentet.
+  // första argumentet i [] är variabeln och dess tillstånd.
+  // andra argumentet i [] är metoden för att ändra värdet på första argumentet.
   // = useState(... start värdet ...)
   const [displayMileage, setDisplayMileage] = useState(false);
   let [count, setCount] = useState(0);
@@ -13,13 +12,7 @@ const VehicleDisplay = ({ vehicle }) => {
     // Alltså anropa return JSX igen...
     setDisplayMileage(!displayMileage);
     setCount(count + 1);
-    //count = count + 1;
   }
-
-  // const onClickHandler = () => {
-  //   setDisplayMileage(!displayMileage);
-  //   setCount(count + 1);
-  // };
 
   let mileage;
 
