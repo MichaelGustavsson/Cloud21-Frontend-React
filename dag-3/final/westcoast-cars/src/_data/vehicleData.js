@@ -1,5 +1,6 @@
 const vehicleData = [
   {
+    id: 1,
     registrationNumber: 'ABC123',
     make: 'Toyota',
     model: 'Yaris',
@@ -18,6 +19,7 @@ const vehicleData = [
     description: '',
   },
   {
+    id: 2,
     registrationNumber: 'XYZ334',
     make: 'Volkswagen',
     model: 'Tiguan',
@@ -36,6 +38,7 @@ const vehicleData = [
     description: '',
   },
   {
+    id: 3,
     registrationNumber: 'GHI789',
     make: 'Volvo',
     model: 'V60',
@@ -54,6 +57,7 @@ const vehicleData = [
     description: '',
   },
   {
+    id: 4,
     registrationNumber: 'DEF456',
     make: 'Volvo',
     model: 'V90',
