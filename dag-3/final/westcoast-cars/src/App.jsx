@@ -1,7 +1,9 @@
+import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
 import NavBar from './components/navbar/Navbar';
 import VehicleList from './components/VehicleList';
 import VehicleStatus from './components/VehicleStatus';
+import VehicleForm from './components/VehicleForm';
 
 import VehicleData from './_data/vehicleData';
 
@@ -11,28 +13,23 @@ function App() {
   const [vehicleData, setVehicleData] = useState(VehicleData);
 
   const deleteVehicle = (id) => {
-    // console.log('App', id);
     setVehicleData(vehicleData.filter((vehicle) => vehicle.id !== id));
   };
 
   const addVehicle = (newVehicle) => {
-    newVehicle.id = 5;
+    newVehicle.id = uuidv4();
     setVehicleData([newVehicle, ...vehicleData]);
-    console.log('App', newVehicle);
   };
 
   return (
-    <>
+    <div>
       <NavBar />
       <section className='main'>
-        <VehicleList
-          handleAddVehicle={addVehicle}
-          handleDelete={deleteVehicle}
-          vehicleList={vehicleData}
-        />
+        <VehicleForm handleAddVehicle={addVehicle} />
+        <VehicleList handleDelete={deleteVehicle} vehicleList={vehicleData} />
         <VehicleStatus vehicleList={vehicleData} />
       </section>
-    </>
+    </div>
   );
 }
 

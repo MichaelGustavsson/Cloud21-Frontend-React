@@ -1,11 +1,10 @@
 function VehicleDetail({ vehicle, deleteVehicle }) {
-  //console.log(props);
   return (
     <tr>
       <td>{vehicle.make}</td>
       <td>{vehicle.model}</td>
-      <td>{vehicle.modelYear}</td>
-      <td>
+      <td className='right'>{vehicle.modelYear}</td>
+      <td className='right'>
         <button onClick={() => deleteVehicle(vehicle.id)}>Ta bort</button>
       </td>
     </tr>
