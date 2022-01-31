@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import VehicleDetail from './VehicleDetail';
 
 import './vehicleList.css';
@@ -7,9 +8,12 @@ function VehicleList({ vehicleList, handleDelete }) {
   return (
     <section className='scroll-container'>
       <div className='table-header'>
-        <button className='btn btn-outline-rounded' id='addNewVehicle'>
+        <Link
+          to={{ pathname: '/add' }}
+          className='btn btn-outline-rounded'
+          id='addNewVehicle'>
           Lägg till ny bil
-        </button>
+        </Link>
       </div>
       <section className='table-container'>
         <table>

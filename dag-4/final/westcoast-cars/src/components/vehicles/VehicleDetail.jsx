@@ -1,8 +1,14 @@
+import { FaRegTrashAlt, FaPen } from 'react-icons/fa';
+
 // function VehicleDetail(props) {
 function VehicleDetail({ vehicle, deleteVehicle }) {
   return (
     <tr>
-      <td></td>
+      <td>
+        <span className='editSpan'>
+          <FaPen />
+        </span>
+      </td>
       {/* <td>{props.vehicle.make}</td>
       <td>{props.vehicle.model}</td>
       <td className='right'>{props.vehicle.modelYear}</td>
@@ -15,7 +21,9 @@ function VehicleDetail({ vehicle, deleteVehicle }) {
       <td>{vehicle.model}</td>
       <td className='right'>{vehicle.modelYear}</td>
       <td className='right'>
-        <button onClick={() => deleteVehicle(vehicle.id)}>Ta bort</button>
+        <span className='deleteSpan' onClick={() => deleteVehicle(vehicle.id)}>
+          <FaRegTrashAlt />
+        </span>
       </td>
     </tr>
   );
