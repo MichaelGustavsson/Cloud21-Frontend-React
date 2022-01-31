@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
-function VehicleForm({ handleAddVehicle }) {
+// function VehicleForm({ handleAddVehicle }) {
+function VehicleForm(props) {
   const [make, setMake] = useState('');
   const [model, setModel] = useState('');
   const [modelYear, setModelYear] = useState('');
@@ -19,11 +20,15 @@ function VehicleForm({ handleAddVehicle }) {
     e.preventDefault();
 
     const newVehicle = {
-      make: make,
-      model: model,
+      // make: make,
+      // model: model,
+      // modelYear: modelYear,
+      make,
+      model,
       modelYear,
     };
-    handleAddVehicle(newVehicle);
+    // handleAddVehicle(newVehicle);
+    props.handleAddVehicle(newVehicle);
     setMake('');
     setModel('');
     setModelYear('');

@@ -1,9 +1,9 @@
 import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
 import NavBar from './components/navbar/Navbar';
-import VehicleList from './components/VehicleList';
-import VehicleStatus from './components/VehicleStatus';
-import VehicleForm from './components/VehicleForm';
+import VehicleList from './components/vehicles/VehicleList';
+import VehicleStatus from './components/vehicles/VehicleStatus';
+import VehicleForm from './components/vehicles/VehicleForm';
 
 import VehicleData from './_data/vehicleData';
 

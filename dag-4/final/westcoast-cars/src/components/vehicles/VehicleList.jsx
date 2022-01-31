@@ -2,6 +2,7 @@ import VehicleDetail from './VehicleDetail';
 
 import './vehicleList.css';
 
+// function VehicleList(props) {
 function VehicleList({ vehicleList, handleDelete }) {
   return (
     <section className='scroll-container'>
@@ -22,6 +23,13 @@ function VehicleList({ vehicleList, handleDelete }) {
             </tr>
           </thead>
           <tbody>
+            {/* {props.vehicleList.map((vehicle) => (
+              <VehicleDetail
+                key={vehicle.id}
+                vehicle={vehicle}
+                deleteVehicle={props.handleDelete}
+              />
+            ))} */}
             {vehicleList.map((vehicle) => (
               <VehicleDetail
                 key={vehicle.id}
