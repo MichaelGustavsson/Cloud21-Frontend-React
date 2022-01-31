@@ -3,15 +3,11 @@ import VehicleDetail from './VehicleDetail';
 
 import './vehicleList.css';
 
-// function VehicleList(props) {
 function VehicleList({ vehicleList, handleDelete }) {
   return (
     <section className='scroll-container'>
       <div className='table-header'>
-        <Link
-          to={{ pathname: '/add' }}
-          className='btn btn-outline-rounded'
-          id='addNewVehicle'>
+        <Link to={{ pathname: '/add' }} className='btn btn-outline-rounded'>
           Lägg till ny bil
         </Link>
       </div>
@@ -27,13 +23,6 @@ function VehicleList({ vehicleList, handleDelete }) {
             </tr>
           </thead>
           <tbody>
-            {/* {props.vehicleList.map((vehicle) => (
-              <VehicleDetail
-                key={vehicle.id}
-                vehicle={vehicle}
-                deleteVehicle={props.handleDelete}
-              />
-            ))} */}
             {vehicleList.map((vehicle) => (
               <VehicleDetail
                 key={vehicle.id}

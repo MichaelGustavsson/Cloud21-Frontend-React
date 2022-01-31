@@ -1,10 +1,11 @@
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
-// function VehicleForm({ handleAddVehicle }) {
 function VehicleForm(props) {
   const [make, setMake] = useState('');
   const [model, setModel] = useState('');
   const [modelYear, setModelYear] = useState('');
+  const navigate = useNavigate();
 
   const handleMakeTextChanged = (e) => {
     setMake(e.target.value);
@@ -20,18 +21,17 @@ function VehicleForm(props) {
     e.preventDefault();
 
     const newVehicle = {
-      // make: make,
-      // model: model,
-      // modelYear: modelYear,
-      make,
-      model,
-      modelYear,
+      make: make,
+      model: model,
+      modelYear: modelYear,
     };
-    // handleAddVehicle(newVehicle);
+
     props.handleAddVehicle(newVehicle);
     setMake('');
     setModel('');
     setModelYear('');
+    // Navigera tillbaka till vehiclelist sidan...
+    navigate('/');
   };
 
   return (

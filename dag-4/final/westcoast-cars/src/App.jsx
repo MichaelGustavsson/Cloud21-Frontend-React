@@ -10,6 +10,7 @@ import VehicleData from './_data/vehicleData';
 
 import './styles.css';
 import VehicleForm from './components/vehicles/VehicleForm';
+import EditVehicle from './components/vehicles/EditVehicle';
 
 function App() {
   const [vehicleData, setVehicleData] = useState(VehicleData);
@@ -38,6 +39,7 @@ function App() {
               path='/add'
               element={<VehicleForm handleAddVehicle={addVehicle} />}
             />
+            <Route path='/edit/:id' element={<EditVehicle />} />
             <Route path='/about' element={<About />} />
           </Routes>
         </section>

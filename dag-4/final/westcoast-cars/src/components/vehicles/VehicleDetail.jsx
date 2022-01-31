@@ -1,22 +1,22 @@
+import { useNavigate } from 'react-router-dom';
 import { FaRegTrashAlt, FaPen } from 'react-icons/fa';
 
-// function VehicleDetail(props) {
 function VehicleDetail({ vehicle, deleteVehicle }) {
+  const navigate = useNavigate();
+
+  const onEditClickHandler = () => {
+    console.log('Edit clicked!', vehicle.id);
+
+    navigate(`/edit/${vehicle.id}`);
+  };
+
   return (
     <tr>
       <td>
-        <span className='editSpan'>
+        <span className='editSpan' onClick={onEditClickHandler}>
           <FaPen />
         </span>
       </td>
-      {/* <td>{props.vehicle.make}</td>
-      <td>{props.vehicle.model}</td>
-      <td className='right'>{props.vehicle.modelYear}</td>
-      <td className='right'>
-        <button onClick={() => props.deleteVehicle(props.vehicle.id)}>
-          Ta bort
-        </button>
-      </td> */}
       <td>{vehicle.make}</td>
       <td>{vehicle.model}</td>
       <td className='right'>{vehicle.modelYear}</td>
