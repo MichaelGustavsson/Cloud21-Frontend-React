@@ -62,7 +62,7 @@ td {
 form {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   gap: 5px;
 }
 
@@ -78,6 +78,7 @@ input {
   position: absolute;
   top: 50%;
 }
+
 .home-background {
   background: url('./img/Westcoast.jpg') center center/cover no-repeat;
   position: relative;

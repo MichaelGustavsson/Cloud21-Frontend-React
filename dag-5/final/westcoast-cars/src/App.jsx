@@ -1,12 +1,11 @@
-import { v4 as uuidv4 } from 'uuid';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import NavBar from './components/navbar/Navbar';
 
 import Home from './components/home/Home';
 import About from './components/about/About';
 
-import VehicleData from './_data/vehicleData';
+// import VehicleData from './_data/vehicleData';
 
 import './styles.css';
 import VehicleForm from './components/vehicles/VehicleForm';
@@ -14,15 +13,39 @@ import EditVehicle from './components/vehicles/EditVehicle';
 import VehiclesInStock from './components/vehicles/VehiclesInStock';
 
 function App() {
-  const [vehicleData, setVehicleData] = useState(VehicleData);
+  const [vehicleData, setVehicleData] = useState([]);
 
-  const deleteVehicle = (id) => {
+  useEffect(() => {
+    fetchVehicles();
+  }, []);
+
+  const deleteVehicle = async (id) => {
+    await fetch(`/vehicles/${id}`, {
+      method: 'DELETE',
+    });
+
     setVehicleData(vehicleData.filter((vehicle) => vehicle.id !== id));
   };
 
-  const addVehicle = (newVehicle) => {
-    newVehicle.id = uuidv4();
-    setVehicleData([newVehicle, ...vehicleData]);
+  const addVehicle = async (newVehicle) => {
+    const response = await fetch('/vehicles', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newVehicle),
+    });
+
+    const data = await response.json();
+    setVehicleData([data, ...vehicleData]);
+  };
+
+  const fetchVehicles = async () => {
+    const response = await fetch('/vehicles');
+    if (response.status === 200) {
+      const data = await response.json();
+      setVehicleData(data);
+    }
   };
 
   return (
