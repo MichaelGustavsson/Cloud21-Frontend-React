@@ -28,6 +28,7 @@ function App() {
     <div>
       <Router>
         <NavBar />
+
         <section className='main'>
           <Routes>
             <Route
