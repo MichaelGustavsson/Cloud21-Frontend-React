@@ -1,16 +1,14 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import NavBar from './components/navbar/Navbar';
 
+import NavBar from './components/navbar/Navbar';
 import Home from './components/home/Home';
 import About from './components/about/About';
-
-// import VehicleData from './_data/vehicleData';
-
-import './styles.css';
 import VehicleForm from './components/vehicles/VehicleForm';
 import EditVehicle from './components/vehicles/EditVehicle';
 import VehiclesInStock from './components/vehicles/VehiclesInStock';
+
+import './styles.css';
 
 function App() {
   const [vehicleData, setVehicleData] = useState([]);
@@ -38,6 +36,20 @@ function App() {
 
     const data = await response.json();
     setVehicleData([data, ...vehicleData]);
+  };
+
+  const updateVehicle = async (updatedVehicle, id) => {
+    const response = await fetch(`/vehicles/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(updatedVehicle),
+    });
+
+    if (response.status === 200) {
+      fetchVehicles();
+    }
   };
 
   const fetchVehicles = async () => {
@@ -76,7 +88,7 @@ function App() {
               path='/edit/:id'
               element={
                 <section className='main'>
-                  <EditVehicle />
+                  <EditVehicle handleUpdate={updateVehicle} />
                 </section>
               }></Route>
             <Route

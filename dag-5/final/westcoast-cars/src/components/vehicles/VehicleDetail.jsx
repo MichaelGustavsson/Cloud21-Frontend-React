@@ -5,8 +5,6 @@ function VehicleDetail({ vehicle, deleteVehicle }) {
   const navigate = useNavigate();
 
   const onEditClickHandler = () => {
-    console.log('Edit clicked!', vehicle.id);
-
     navigate(`/edit/${vehicle.id}`);
   };
 

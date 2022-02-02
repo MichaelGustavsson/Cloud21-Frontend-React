@@ -1,23 +1,10 @@
 {
   "vehicles": [
     {
-      "id": 1,
-      "registrationNumber": "ABC123",
       "make": "Toyota",
-      "model": "Yaris 2.0",
-      "color": "Silver metallic",
-      "modelYear": 2011,
-      "mileage": 89750,
-      "fuelType": "Bensin",
-      "gearType": "Manuell",
-      "numberOfDoors": 4,
-      "numberOfGears": 5,
-      "numberOfSeats": 4,
-      "enginePower": "125Hk",
-      "isImported": false,
-      "value": 0,
-      "imageUrl": "no-image.png",
-      "description": ""
+      "model": "Yaris 2.0 Sport",
+      "modelYear": "2009",
+      "id": 1
     },
     {
       "id": 2,
@@ -85,13 +72,13 @@
     {
       "make": "Ford",
       "model": "Mustang Mach-E",
-      "modelYear": "2021",
+      "modelYear": "2022",
       "id": 8
     },
     {
       "make": "Fiat",
       "model": "Uno",
-      "modelYear": "1992",
+      "modelYear": "1998",
       "id": 9
     }
   ]
