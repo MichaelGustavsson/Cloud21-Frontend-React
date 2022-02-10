@@ -1,0 +1,13 @@
+.table-footer {
+  display: flex;
+  justify-content: center;
+  background-color: #ee9504;
+  padding: 10px 15px;
+  gap: 10px;
+  color: #1e1e72;
+  border: solid 1px #152d6d;
+}
+
+.table-footer > h4 {
+  color: var(--light-color);
+}

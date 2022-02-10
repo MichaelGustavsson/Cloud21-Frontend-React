@@ -1,0 +1,34 @@
+a {
+  color: var(--light-color);
+  text-decoration: none;
+}
+
+.navbar h4 {
+  color: var(--light-color);
+  padding: 0.3rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: var(--nav-bar-color);
+  color: var(--light-color);
+  padding: 0.7rem 0.7rem;
+}
+
+.navbar-items {
+  display: flex;
+  gap: 10px;
+}
+
+/* .link-active {
+  color: yellowgreen;
+  font-weight: bolder;
+} */
+
+.active {
+  color: yellowgreen;
+  font-weight: bolder;
+}

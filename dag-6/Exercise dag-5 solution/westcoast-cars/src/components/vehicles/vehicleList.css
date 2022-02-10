@@ -1,0 +1,35 @@
+.search-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.table-header {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  background-color: var(--secondary-color);
+  padding: 1rem 1.5rem;
+}
+
+.searchBar {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.searchInput {
+  border-radius: 1.6rem;
+  height: 40px;
+  padding: 0 15px;
+  color: var(--light-color);
+  border: solid 2px var(--light-color);
+}
+
+.searchButton {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  height: 40px;
+  border-radius: 20px;
+  padding: 0 1rem;
+  border: none;
+}
