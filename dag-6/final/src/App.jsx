@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import VehicleList from './components/VehicleList';
 
 import './styles.css';
 
@@ -17,7 +18,11 @@ function App() {
     }
   };
 
-  return <div></div>;
+  return (
+    <div>
+      <VehicleList />
+    </div>
+  );
 }
 
 export default App;

@@ -29,6 +29,11 @@ body {
 h1 {
   font-size: 2rem;
   padding: 1rem 0;
+  color: var(--light-color);
+}
+
+h2 {
+  color: #ee9504;
 }
 
 h4 {
@@ -73,6 +78,10 @@ input {
   padding: 3px 5px;
   background: transparent;
   outline: none !important;
+}
+
+.vehicleInfo {
+  background-color: var(--light-color);
 }
 
 .page {

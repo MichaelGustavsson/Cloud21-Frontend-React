@@ -81,6 +81,16 @@
       "fuelType": "Diesel",
       "gearType": "Manuell",
       "id": 10
+    },
+    {
+      "make": "Fiat",
+      "model": "Modell 100",
+      "modelYear": "2011",
+      "mileage": "80000",
+      "color": "Gul",
+      "fuelType": "Bensin",
+      "gearType": "Automat",
+      "id": 11
     }
   ]
 }
